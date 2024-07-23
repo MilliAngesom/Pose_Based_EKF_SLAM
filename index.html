@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Pose-based EKF SLAM for Robot Localization</title>
+  <link rel="icon" type="image/x-icon" href="static/pdfs/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Pose-based EKF SLAM for Robot Localization</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=T_LryjgAAAAJ&hl=en" target="_blank">Huy Nguyen</a><sup>1,2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span class="author-block">
+                    <a href="https://github.com/MilliAngesom" target="_blank">Million Angesom</a><sup>1,2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=4W1u1KMAAAAJ&hl=en" target="_blank">Mohsin Kabir</a><sup>1,2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=eKUaGUEAAAAJ&hl=en&oi=ao" target="_blank">Roger Pi Roig</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="author-block">
+                      <a href="https://scholar.google.com/citations?user=RJ8xzYsAAAAJ&hl=en&oi=ao" target="_blank">Pere Ridao Rodríguez</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>University of Girona</span>&nbsp;&nbsp;
+                    <span class="author-block"><sup>2</sup>EMJM in Intelligent Field Robotic Systems</span>&nbsp;&nbsp;
+                  </div>
+                  <div class="logo-container">
+                    <img src="./static/images/udg.png" />
+                    <img src="./static/images/ifros.png" />
+                  </div>
+                  <!-- <div class="column has-text-centered">
+                    <div class="publication-links"> -->
+                         <!-- Arxiv PDF link -->
+                      <!-- <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="https://youtu.be/XZIpZKQPmBY" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                      </span>
+                      <span>Video</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://drive.google.com/file/d/1gejfjgUPDrHrL5meqoU4-hRMOq4SYv-u/view" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            This project presents a study on pose-based SLAM using EKF for robot localization, specifically focusing on a differential
+            drive robot equipped with Lidar, IMU, and wheel velocity sensors. The mapping algorithm utilized is the Iterative Closest Point (ICP), while
+            the Extended Kalman filter is employed for state estimation. The report outlines the robot motion model and observations model used
+            in the SLAM algorithm. The implementation details, experimental evaluation, and results are discussed, highlighting the effectiveness
+            of pose-based SLAM in achieving accurate robot localization and mapping in real-world environments.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Paper video. -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-two-thirds">
+    <h2 class="title is-3">Video</h2>
+    <div class="publication-video">
+      <iframe src="https://www.youtube.com/embed/pgZMlfpJbZk?modestbranding=1&autohide=1&showinfo=0&controls=1"
+        frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- Paper video. -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-two-thirds">
+    <h2 class="title is-3">Simulation</h2>
+    <div class="publication-video">
+      <iframe src="https://www.youtube.com/embed/9Va9XT8xnCc?modestbranding=1&autohide=1&showinfo=0&controls=1"
+        frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+</section>
+<!-- End teaser video -->
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+
+      <!-- Animation. -->
+      <div class="rows is-centered ">
+        <div class="row is-full-width">
+            <!--/ Methodology. -->
+            <h2 class="title is-3">Methodology</h2>
+
+            <div class="container">
+              <div class="columns is-vcentered  is-centered">
+                <img src="./static/images/localisation.drawio.png" alt="functional_block_diagram" />
+                </br>
+              </div>
+              <br>
+              <h2 class="subtitle has-text-centered">
+                The system consists of wheel sensors that capture wheel velocities, which are then utilized as inputs for the prediction
+                state of the Extended Kalman Filter (EKF). The EKF generates predicted states, which are subsequently fed into theobservation model. The observation model is responsible for
+                generating expected measurements based on the predictedstates.
+                Simultaneously, the Lidar sensors capture scans, which
+                are processed by the Iterative Closest Point (ICP) algorithm.
+                The ICP algorithm produces measurements based on the
+                scans. These measurements, along with the expected measurements from the observation model, are then passed to
+                the update state of the EKF. By integrating the expected and measured data, the
+                update state of the EKF constructs a map. This map contains
+                information about poses (positions and orientations) as well
+                as covariance estimates. Overall, this system architecture
+                enables the derivation of accurate poses and covariance
+                information from the generated map.
+              </h2>
+            </div>
+            <br>
+            <br>
+            <!--/ Results. -->
+            <!-- <h2 class="title is-3">Results</h2>
+
+            <div class="container">
+              <div class="columns is-vcentered  is-centered">
+                <img src="./static/images/result.png" alt="results1" />
+                </br>
+              </div>
+              <br>
+              <h2 class="subtitle has-text-centered">
+                In this project, we investigate the impact of varying Weighted Damped Least Squares (WDLS) on the performance of the mobile manipulator system. We present three experimental
+                scenarios to illustrate the effects. The equal weights are assigned to both the arm and the mobile base. Consequently,
+                the controller allocates comparable efforts to both components in accomplishing the task. However, this uniform
+                distribution of control can lead to occasional instability. Specifically, in cases where it would be more appropriate
+                to prioritize the movement of the base over the arm, the controller tends to utilize both components simultaneously.
+                Similarly, when the arm should be given more preference, the controller still relies on the base. The joint velocity plot
+                in the plot depicts the balanced velocities sent to the arm and base.
+              </h2>
+            </div>
+            <br>
+            <br> -->
+</section>
+<!-- End image carousel -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Results</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-D405">
+          <img src="./static/images/groundTR_DEADRCK.png" id="D405" alt="Blue Block" height="100%">
+          <div class="subtitle has-text-centered">Dead reckoning map(RED) and Ground Truth map(GREEN)</div>
+        </div>
+        <div class="item item-D415">
+          <img src="./static/images/groundTRH_SLAM.png" id="D415" alt="Metal" height="100%">
+          <div class="subtitle has-text-centered">SLAM map (BLUE) and Ground Truth map(GREEN)</div>
+        </div>
+        <div class="item item-D435">
+          <img src="./static/images/all.png" id="D435" alt="Orange Block" height="100%">
+          <div class="subtitle has-text-centered">Dead reckoning map (RED), SLAM map (BLUE), and Ground Truth map(GREEN)</div>
+        </div>
+        <div class="item item-D455">
+          <img src="./static/images/GRTH_DEADRCK_PATH.png" id="D455" alt="yellow Block" height="100%">
+          <div class="subtitle has-text-centered">Dead reckoning Trajectory (RED) and Ground Truth Trajectory (GREEN)</div>
+        </div>
+        <div class="item item-D465">
+          <img src="./static/images/GRTRTH_SLAM_PATH.png" id="D465" alt="black Block" height="100%">
+          <div class="subtitle has-text-centered">SLAM Trajectory (BLUE) and Ground Truth Trajectory (GREEN)</div>
+        </div>
+        <div class="item item-D475">
+          <img src="./static/images/allPaths.png" id="D475" alt="white Block" height="100%">
+          <div class="subtitle has-text-centered">Dead reckoning Trajectory (RED), SLAM Trajectory (BLUE), and Ground Truth (GREEN)</div>
+        </div>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        Initially, the map generated by dead reckoning exhibited a close alignment with the ground truth map. However, as time
+        progressed, the map started to drift gradually, resulting in increasing misalignment. This behavior can be attributed
+        to the accumulation of uncertainty and error in the wheel sensors. Over time, the uncertainty in the estimated robot
+        pose by dead reckoning increased, leading to a divergence from the actual ground truth position of the robot. In contrast, SLAM consistently provides stable and ac-
+        curate estimates of the ground truth states. The map generated by SLAM remains in close proximity to the ground truth map. This improved performance can be attributed to the
+        additional correction step in the Extended Kalman Filter (EKF)-based SLAM. While dead reckoning solely relies on
+        prediction, SLAM incorporates a correction step that effectively reduces the accumulated error and uncertainty
+        during the prediction phase. During the correction step, all registered poses of the robot are simultaneously updated, leveraging the intercorrelations between the poses. This si-
+        multaneous update of poses in SLAM significantly enhances the accuracy and robustness of the estimated trajectory.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container"> -->
+      <!-- Paper video. -->
+      <!-- <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video"> -->
+            <!-- Youtube embed code here -->
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%"> -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\ -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section> -->
+<!--End BibTex citation -->
+
+
+<section class="section" id="acknowledgements">
+  <div class="container content is-max-desktop">
+    <h2 class="title">Acknowledgements</h2>
+    <p>This project is part of the IFRoS program course. If you are interested in the project or intend to use it for any purpose, please contact the author first.<p>
+    <p>We borrow the page template from  <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. Special thanks to them!
+      <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+      Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</section>
+
+  <!-- <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            We borrow the page template from  <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. Special thanks to them!
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
